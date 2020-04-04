@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SlimeA.png-4fb9310a2fd51ecb6fb2c8bde3cf5892.stex"
+path="res://.import/SlimeA.png-918ef2ff85b03c461c8490f38e687833.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SlimeA/SlimeA.png"
-dest_files=[ "res://.import/SlimeA.png-4fb9310a2fd51ecb6fb2c8bde3cf5892.stex" ]
+source_file="res://PixelMob/SlimeA.png"
+dest_files=[ "res://.import/SlimeA.png-918ef2ff85b03c461c8490f38e687833.stex" ]
 
 [params]
 

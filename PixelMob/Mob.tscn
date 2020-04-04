@@ -1,12 +1,14 @@
 [gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://SlimeA/SlimeA.png" type="Texture" id=1]
-[ext_resource path="res://SlimeA/Idle1.tres" type="Animation" id=2]
-[ext_resource path="res://SlimeA/Attack.tres" type="Animation" id=3]
-[ext_resource path="res://SlimeA/idle0.tres" type="Animation" id=4]
-[ext_resource path="res://SlimeA/Walk.tres" type="Animation" id=5]
-[ext_resource path="res://SlimeA/Idle2.tres" type="Animation" id=6]
-[ext_resource path="res://Mob.cs" type="Script" id=7]
+[ext_resource path="res://PixelMob/Animation/idle0.tres" type="Animation" id=1]
+[ext_resource path="res://PixelMob/Animation/Idle2.tres" type="Animation" id=2]
+[ext_resource path="res://PixelMob/Animation/Walk.tres" type="Animation" id=3]
+[ext_resource path="res://PixelMob/Animation/Attack.tres" type="Animation" id=4]
+[ext_resource path="res://PixelMob/Animation/Idle1.tres" type="Animation" id=5]
+[ext_resource path="res://PixelMob/SlimeA.png" type="Texture" id=6]
+[ext_resource path="res://PixelMob/Mob.cs" type="Script" id=7]
+
+
 
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "Attack"
@@ -78,7 +80,7 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 6, 6 )
-texture = ExtResource( 1 )
+texture = ExtResource( 6 )
 centered = false
 hframes = 16
 frame = 7
@@ -86,11 +88,11 @@ frame = 7
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 autoplay = "Attack"
 method_call_mode = 1
-anims/Attack = ExtResource( 3 )
-anims/Idle0 = ExtResource( 4 )
-anims/Idle1 = ExtResource( 2 )
-anims/Idle2 = ExtResource( 6 )
-anims/Walk = ExtResource( 5 )
+anims/Attack = ExtResource( 4 )
+anims/Idle0 = ExtResource( 1 )
+anims/Idle1 = ExtResource( 5 )
+anims/Idle2 = ExtResource( 2 )
+anims/Walk = ExtResource( 3 )
 
 [node name="AnimationTree" type="AnimationTree" parent="Sprite"]
 tree_root = SubResource( 13 )
