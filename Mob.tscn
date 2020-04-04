@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://SlimeA/SlimeA.png" type="Texture" id=1]
 [ext_resource path="res://SlimeA/Idle1.tres" type="Animation" id=2]
@@ -6,6 +6,53 @@
 [ext_resource path="res://SlimeA/idle0.tres" type="Animation" id=4]
 [ext_resource path="res://SlimeA/Walk.tres" type="Animation" id=5]
 [ext_resource path="res://SlimeA/Idle2.tres" type="Animation" id=6]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "Attack"
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "Idle0"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "Idle1"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Idle2"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=5]
+blend_point_0/node = SubResource( 2 )
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource( 3 )
+blend_point_1/pos = 0.0
+blend_point_2/node = SubResource( 4 )
+blend_point_2/pos = 1.0
+snap = 1.0
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=7]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+
+[sub_resource type="AnimationNodeStateMachine" id=13]
+states/Attack/node = SubResource( 1 )
+states/Attack/position = Vector2( 608, 137 )
+states/Idle/node = SubResource( 5 )
+states/Idle/position = Vector2( 442, 59 )
+states/Walk/node = SubResource( 6 )
+states/Walk/position = Vector2( 277, 137 )
+transitions = [ "Idle", "Attack", SubResource( 7 ), "Attack", "Idle", SubResource( 8 ), "Attack", "Walk", SubResource( 9 ), "Walk", "Attack", SubResource( 10 ), "Walk", "Idle", SubResource( 11 ), "Idle", "Walk", SubResource( 12 ) ]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
 
 [node name="Mob" type="Control"]
 margin_right = 96.0
@@ -30,3 +77,10 @@ anims/Idle0 = ExtResource( 4 )
 anims/Idle1 = ExtResource( 2 )
 anims/Idle2 = ExtResource( 6 )
 anims/Walk = ExtResource( 5 )
+
+[node name="AnimationTree" type="AnimationTree" parent="Sprite"]
+tree_root = SubResource( 13 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 14 )
+parameters/Idle/blend_position = 0
