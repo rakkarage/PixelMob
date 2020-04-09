@@ -27,8 +27,8 @@ public class Mob : Sprite
 	public void OnAnimationFinished(string name)
 	{
 		Print("!!!finished: " + name);
-		_tree.Set("parameters/Idle/blend_position", _r.RandfRange(-1, 1));
-		_playback.Travel("Idle");
+		_tree.Set("parameters/Idle/BlendSpace1D/blend_position", _r.RandfRange(-1, 1));
+		_playback.Start("Idle");
 	}
 	public void OnAnimationChanged(string name)
 	{

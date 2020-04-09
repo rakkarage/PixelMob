@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://PixelMob/Animation/idle0.tres" type="Animation" id=1]
 [ext_resource path="res://PixelMob/Animation/Idle2.tres" type="Animation" id=2]
@@ -29,40 +29,46 @@ blend_point_2/node = SubResource( 4 )
 blend_point_2/pos = 1.0
 snap = 1.0
 
-[sub_resource type="AnimationNodeAnimation" id=6]
-animation = "Walk"
+[sub_resource type="AnimationNodeBlendTree" id=6]
+nodes/BlendSpace1D/node = SubResource( 5 )
+nodes/BlendSpace1D/position = Vector2( 280, 80 )
+nodes/output/position = Vector2( 480, 100 )
+node_connections = [ "output", 0, "BlendSpace1D" ]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=7]
-advance_condition = "attack"
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "Walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=8]
 switch_mode = 2
-auto_advance = true
+advance_condition = "walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=9]
-switch_mode = 2
-advance_condition = "walk"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=10]
 advance_condition = "attack"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
 advance_condition = "walk"
 
-[sub_resource type="AnimationNodeStateMachine" id=13]
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+advance_condition = "attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=14]
 states/Attack/node = SubResource( 1 )
 states/Attack/position = Vector2( 597, 137 )
-states/Idle/node = SubResource( 5 )
-states/Idle/position = Vector2( 441, 59 )
-states/Walk/node = SubResource( 6 )
-states/Walk/position = Vector2( 277, 137 )
-transitions = [ "Idle", "Attack", SubResource( 7 ), "Attack", "Idle", SubResource( 8 ), "Attack", "Walk", SubResource( 9 ), "Walk", "Attack", SubResource( 10 ), "Walk", "Idle", SubResource( 11 ), "Idle", "Walk", SubResource( 12 ) ]
+states/Idle/node = SubResource( 6 )
+states/Idle/position = Vector2( 433, 45 )
+states/Walk/node = SubResource( 7 )
+states/Walk/position = Vector2( 279, 137 )
+transitions = [ "Attack", "Walk", SubResource( 8 ), "Walk", "Attack", SubResource( 9 ), "Walk", "Idle", SubResource( 10 ), "Idle", "Walk", SubResource( 11 ), "Idle", "Attack", SubResource( 12 ), "Attack", "Idle", SubResource( 13 ) ]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=15]
 
 [node name="Sprite" type="Sprite"]
 scale = Vector2( 6, 6 )
@@ -70,6 +76,7 @@ texture = ExtResource( 6 )
 centered = false
 flip_h = true
 hframes = 16
+frame = 2
 script = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -81,13 +88,13 @@ anims/Idle2 = ExtResource( 2 )
 anims/Walk = ExtResource( 3 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 13 )
+tree_root = SubResource( 14 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 14 )
+parameters/playback = SubResource( 15 )
 parameters/conditions/attack = false
 parameters/conditions/walk = false
-parameters/Idle/blend_position = 0.0
+parameters/Idle/BlendSpace1D/blend_position = 0
 [connection signal="animation_changed" from="AnimationPlayer" to="." method="OnAnimationChanged"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="OnAnimationFinished"]
 [connection signal="tree_entered" from="AnimationTree" to="." method="OnAnimationTreeEntered"]

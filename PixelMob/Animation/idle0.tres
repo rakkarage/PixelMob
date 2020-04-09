@@ -3,7 +3,6 @@
 [resource]
 resource_name = "Idle0"
 length = 1.5
-loop = true
 step = 0.125
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")

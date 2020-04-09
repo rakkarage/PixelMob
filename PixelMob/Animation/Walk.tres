@@ -3,7 +3,6 @@
 [resource]
 resource_name = "Walk"
 length = 1.125
-loop = true
 step = 0.125
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
