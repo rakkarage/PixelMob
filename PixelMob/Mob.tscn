@@ -33,7 +33,6 @@ snap = 1.0
 animation = "Walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=7]
-auto_advance = true
 advance_condition = "attack"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=8]
@@ -42,19 +41,16 @@ auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=9]
 switch_mode = 2
-auto_advance = true
 advance_condition = "walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=10]
-switch_mode = 2
-auto_advance = true
 advance_condition = "attack"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=11]
 switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=12]
-auto_advance = true
 advance_condition = "walk"
 
 [sub_resource type="AnimationNodeStateMachine" id=13]
@@ -73,11 +69,10 @@ scale = Vector2( 6, 6 )
 texture = ExtResource( 6 )
 centered = false
 hframes = 16
-frame = 7
 script = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "Attack"
+autoplay = "Idle0"
 method_call_mode = 1
 anims/Attack = ExtResource( 4 )
 anims/Idle0 = ExtResource( 1 )
