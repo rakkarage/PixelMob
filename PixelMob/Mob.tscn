@@ -55,9 +55,9 @@ advance_condition = "walk"
 
 [sub_resource type="AnimationNodeStateMachine" id=13]
 states/Attack/node = SubResource( 1 )
-states/Attack/position = Vector2( 608, 137 )
+states/Attack/position = Vector2( 597, 137 )
 states/Idle/node = SubResource( 5 )
-states/Idle/position = Vector2( 442, 59 )
+states/Idle/position = Vector2( 441, 59 )
 states/Walk/node = SubResource( 6 )
 states/Walk/position = Vector2( 277, 137 )
 transitions = [ "Idle", "Attack", SubResource( 7 ), "Attack", "Idle", SubResource( 8 ), "Attack", "Walk", SubResource( 9 ), "Walk", "Attack", SubResource( 10 ), "Walk", "Idle", SubResource( 11 ), "Idle", "Walk", SubResource( 12 ) ]
@@ -68,12 +68,13 @@ transitions = [ "Idle", "Attack", SubResource( 7 ), "Attack", "Idle", SubResourc
 scale = Vector2( 6, 6 )
 texture = ExtResource( 6 )
 centered = false
+flip_h = true
 hframes = 16
+frame = 1
 script = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle0"
-method_call_mode = 1
 anims/Attack = ExtResource( 4 )
 anims/Idle0 = ExtResource( 1 )
 anims/Idle1 = ExtResource( 5 )
@@ -87,7 +88,8 @@ active = true
 parameters/playback = SubResource( 14 )
 parameters/conditions/attack = false
 parameters/conditions/walk = false
-parameters/Idle/blend_position = 0
+parameters/Idle/blend_position = 0.0
+[connection signal="animation_changed" from="AnimationPlayer" to="." method="OnAnimationChanged"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="OnAnimationFinished"]
 [connection signal="tree_entered" from="AnimationTree" to="." method="OnAnimationTreeEntered"]
 [connection signal="tree_exited" from="AnimationTree" to="." method="OnAnimationTreeExited"]

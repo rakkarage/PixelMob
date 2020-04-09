@@ -26,8 +26,12 @@ public class Mob : Sprite
 	{
 		Print("!!!exiting");
 	}
-	public void OnAnimationFinished()
+	public void OnAnimationFinished(string name)
 	{
-		Print("!!!finished");
+		Print("!!!finished: " + name);
+	}
+	public void OnAnimationChanged(string name)
+	{
+		Print("!!!changed: " + name);
 	}
 }
