@@ -6,83 +6,101 @@
 [ext_resource path="res://PixelMob/Animation/Attack.tres" type="Animation" id=4]
 [ext_resource path="res://PixelMob/Animation/Idle1.tres" type="Animation" id=5]
 [ext_resource path="res://PixelMob/SlimeA.png" type="Texture" id=6]
-[ext_resource path="res://PixelMob/Mob.cs" type="Script" id=7]
 
-[sub_resource type="AnimationNodeAnimation" id=1]
-animation = "Attack"
+[sub_resource type="CSharpScript" id=1]
+resource_name = "Test"
+script/source = "using Godot;
+using System;
+
+public class Test : Sprite
+{
+    // Declare member variables here. Examples:
+    // private int a = 2;
+    // private string b = \"text\";
+
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
+        
+    }
+
+//  // Called every frame. 'delta' is the elapsed time since the previous frame.
+//  public override void _Process(float delta)
+//  {
+//      
+//  }
+}
+"
 
 [sub_resource type="AnimationNodeAnimation" id=2]
-animation = "Idle0"
+animation = "Attack"
 
 [sub_resource type="AnimationNodeAnimation" id=3]
-animation = "Idle1"
+animation = "Idle0"
 
 [sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Idle1"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
 animation = "Idle2"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=5]
-blend_point_0/node = SubResource( 2 )
+[sub_resource type="AnimationNodeBlendSpace1D" id=6]
+blend_point_0/node = SubResource( 3 )
 blend_point_0/pos = -1.0
-blend_point_1/node = SubResource( 3 )
+blend_point_1/node = SubResource( 4 )
 blend_point_1/pos = 0.0
-blend_point_2/node = SubResource( 4 )
+blend_point_2/node = SubResource( 5 )
 blend_point_2/pos = 1.0
 snap = 1.0
 
-[sub_resource type="AnimationNodeAnimation" id=6]
+[sub_resource type="AnimationNodeAnimation" id=7]
 animation = "Walk"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=7]
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
 auto_advance = true
 advance_condition = "attack"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=8]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=9]
 switch_mode = 2
 auto_advance = true
-advance_condition = "walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=10]
 switch_mode = 2
 auto_advance = true
-advance_condition = "attack"
+advance_condition = "walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=11]
 switch_mode = 2
+auto_advance = true
+advance_condition = "attack"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=12]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
 auto_advance = true
 advance_condition = "walk"
 
-[sub_resource type="AnimationNodeStateMachine" id=13]
-states/Attack/node = SubResource( 1 )
+[sub_resource type="AnimationNodeStateMachine" id=14]
+states/Attack/node = SubResource( 2 )
 states/Attack/position = Vector2( 608, 137 )
-states/Idle/node = SubResource( 5 )
+states/Idle/node = SubResource( 6 )
 states/Idle/position = Vector2( 442, 59 )
-states/Walk/node = SubResource( 6 )
+states/Walk/node = SubResource( 7 )
 states/Walk/position = Vector2( 277, 137 )
-transitions = [ "Idle", "Attack", SubResource( 7 ), "Attack", "Idle", SubResource( 8 ), "Attack", "Walk", SubResource( 9 ), "Walk", "Attack", SubResource( 10 ), "Walk", "Idle", SubResource( 11 ), "Idle", "Walk", SubResource( 12 ) ]
+transitions = [ "Idle", "Attack", SubResource( 8 ), "Attack", "Idle", SubResource( 9 ), "Attack", "Walk", SubResource( 10 ), "Walk", "Attack", SubResource( 11 ), "Walk", "Idle", SubResource( 12 ), "Idle", "Walk", SubResource( 13 ) ]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=15]
 
-[node name="Mob" type="Control"]
-margin_right = 96.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 96, 96 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite"]
 scale = Vector2( 6, 6 )
 texture = ExtResource( 6 )
 centered = false
 hframes = 16
+frame = 7
+script = SubResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Attack"
 method_call_mode = 1
 anims/Attack = ExtResource( 4 )
@@ -91,12 +109,11 @@ anims/Idle1 = ExtResource( 5 )
 anims/Idle2 = ExtResource( 2 )
 anims/Walk = ExtResource( 3 )
 
-[node name="AnimationTree" type="AnimationTree" parent="Sprite"]
-tree_root = SubResource( 13 )
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 14 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 14 )
+parameters/playback = SubResource( 15 )
 parameters/conditions/attack = false
 parameters/conditions/walk = false
 parameters/Idle/blend_position = 0
-script = ExtResource( 7 )
