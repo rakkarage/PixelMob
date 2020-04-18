@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="PixelMob"
 config/description="Pixel-perfect animated slime monster."
-run/main_scene="res://PixelMob/Mob.tscn"
+run/main_scene="res://Demo.tscn"
 config/icon="res://icon.png"
 
 [display]
