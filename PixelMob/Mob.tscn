@@ -69,7 +69,7 @@ transitions = [ "Attack", "Walk", SubResource( 8 ), "Walk", "Attack", SubResourc
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=15]
 
-[node name="Sprite" type="Sprite"]
+[node name="Mob" type="Sprite"]
 scale = Vector2( 6, 6 )
 texture = ExtResource( 6 )
 centered = false
