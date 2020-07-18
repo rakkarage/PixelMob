@@ -109,8 +109,8 @@ stream = ExtResource( 8 )
 [node name="Panel" type="PanelContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -58.5
-margin_right = 58.5
+margin_left = -78.5
+margin_right = 78.5
 margin_bottom = 34.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -119,7 +119,7 @@ __meta__ = {
 [node name="HBox" type="HBoxContainer" parent="Panel"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 153.0
+margin_right = 150.0
 margin_bottom = 27.0
 __meta__ = {
 "_edit_use_anchors_": false
