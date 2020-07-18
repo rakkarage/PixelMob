@@ -119,7 +119,7 @@ __meta__ = {
 [node name="HBox" type="HBoxContainer" parent="Panel"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 110.0
+margin_right = 153.0
 margin_bottom = 27.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -135,3 +135,9 @@ margin_left = 56.0
 margin_right = 99.0
 margin_bottom = 20.0
 text = "Walk"
+
+[node name="Turn" type="Button" parent="Panel/HBox"]
+margin_left = 103.0
+margin_right = 143.0
+margin_bottom = 20.0
+text = "Turn"
