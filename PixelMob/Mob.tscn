@@ -80,6 +80,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 64, 64 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 6 )
 centered = false
