@@ -5,8 +5,9 @@
 [ext_resource path="res://PixelMob/Animation/Walk.tres" type="Animation" id=3]
 [ext_resource path="res://PixelMob/Animation/Idle2.tres" type="Animation" id=4]
 [ext_resource path="res://PixelMob/Animation/idle0.tres" type="Animation" id=5]
-[ext_resource path="res://PixelMob/SlimeA.png" type="Texture" id=6]
+[ext_resource path="res://PixelMob/Sprite/SlimeA.png" type="Texture" id=6]
 [ext_resource path="res://PixelMob/Mob.gd" type="Script" id=7]
+
 
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "Attack"
@@ -127,8 +128,8 @@ margin_right = 52.0
 margin_bottom = 20.0
 text = "Attack"
 
-[node name="Move" type="Button" parent="Panel/HBox"]
+[node name="Walk" type="Button" parent="Panel/HBox"]
 margin_left = 56.0
-margin_right = 103.0
+margin_right = 99.0
 margin_bottom = 20.0
-text = "Move"
+text = "Walk"

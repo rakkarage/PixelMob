@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SlimeSquareSmallA.png-df64d7e12c1b5a831ba8641dcb25dc19.stex"
+path="res://.import/SlimeB.png-5281fbd4a4955e6f334e4930c2483f42.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PixelMob/SlimeSquareSmallA.png"
-dest_files=[ "res://.import/SlimeSquareSmallA.png-df64d7e12c1b5a831ba8641dcb25dc19.stex" ]
+source_file="res://PixelMob/Sprite/SlimeB.png"
+dest_files=[ "res://.import/SlimeB.png-5281fbd4a4955e6f334e4930c2483f42.stex" ]
 
 [params]
 
