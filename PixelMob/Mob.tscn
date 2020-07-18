@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://PixelMob/Animation/Idle1.tres" type="Animation" id=1]
 [ext_resource path="res://PixelMob/Animation/Attack.tres" type="Animation" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://PixelMob/Animation/idle0.tres" type="Animation" id=5]
 [ext_resource path="res://PixelMob/Sprite/SlimeA.png" type="Texture" id=6]
 [ext_resource path="res://PixelMob/Mob.gd" type="Script" id=7]
+[ext_resource path="res://PixelMob/Audio/167075__drminky__slime-land.tres" type="AudioStream" id=8]
 
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "Attack"
@@ -80,10 +81,9 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 64, 64 )
+position = Vector2( 320, 240 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 6 )
-centered = false
 flip_h = true
 hframes = 16
 
@@ -102,6 +102,9 @@ parameters/playback = SubResource( 15 )
 parameters/conditions/attack = false
 parameters/conditions/walk = false
 parameters/Idle/BlendSpace1D/blend_position = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite"]
+stream = ExtResource( 8 )
 
 [node name="Panel" type="PanelContainer" parent="."]
 anchor_left = 0.5

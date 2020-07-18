@@ -25,6 +25,10 @@ config/description="Pixel-perfect animated slime monster."
 run/main_scene="res://Demo.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Random="*res://Intro/Random.gd"
+
 [display]
 
 window/size/width=640
