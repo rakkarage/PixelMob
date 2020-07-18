@@ -18,6 +18,7 @@ func _ready() -> void:
 	Utility.ok(_player.connect("animation_changed", self, "_snimationChanged"))
 	Utility.ok(_player.connect("animation_finished", self, "_animationFinished"))
 	Utility.ok(_player.connect("caches_cleared", self, "_animationCache"))
+	# Utility.ok(_player.connect("finished", self, "_finished"))
 
 func _attackPressed() -> void:
 	_machine.travel("Attack")
@@ -36,3 +37,6 @@ func _animationFinished(name: String) -> void:
 
 func _animationCache() -> void:
 	print("cache: %" % name)
+
+func _finished() -> void:
+	print("fuck")
