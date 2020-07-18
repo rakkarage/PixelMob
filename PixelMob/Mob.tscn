@@ -8,7 +8,6 @@
 [ext_resource path="res://PixelMob/Sprite/SlimeA.png" type="Texture" id=6]
 [ext_resource path="res://PixelMob/Mob.gd" type="Script" id=7]
 
-
 [sub_resource type="AnimationNodeAnimation" id=1]
 animation = "Attack"
 
@@ -68,6 +67,7 @@ states/Idle/position = Vector2( 433, 45 )
 states/Walk/node = SubResource( 7 )
 states/Walk/position = Vector2( 279, 137 )
 transitions = [ "Attack", "Walk", SubResource( 8 ), "Walk", "Attack", SubResource( 9 ), "Walk", "Idle", SubResource( 10 ), "Idle", "Walk", SubResource( 11 ), "Idle", "Attack", SubResource( 12 ), "Attack", "Idle", SubResource( 13 ) ]
+graph_offset = Vector2( 88, -35 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=15]
 
@@ -85,10 +85,8 @@ texture = ExtResource( 6 )
 centered = false
 flip_h = true
 hframes = 16
-frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
-autoplay = "Idle0"
 anims/Attack = ExtResource( 2 )
 anims/Idle0 = ExtResource( 5 )
 anims/Idle1 = ExtResource( 1 )
