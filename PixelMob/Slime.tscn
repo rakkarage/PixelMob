@@ -1,16 +1,15 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://PixelMob/Animation/SlimeIdle1.tres" type="Animation" id=1]
-[ext_resource path="res://PixelMob/Animation/SlimeIdle0.tres" type="Animation" id=2]
-[ext_resource path="res://PixelMob/Animation/SlimeIdle2.tres" type="Animation" id=3]
-[ext_resource path="res://PixelMob/Animation/SlimeWalk.tres" type="Animation" id=4]
-[ext_resource path="res://PixelMob/Animation/SlimeAttack.tres" type="Animation" id=5]
+[ext_resource path="res://PixelMob/Animation/Slime/Idle1.tres" type="Animation" id=1]
+[ext_resource path="res://PixelMob/Animation/Slime/Idle0.tres" type="Animation" id=2]
+[ext_resource path="res://PixelMob/Animation/Slime/Idle2.tres" type="Animation" id=3]
+[ext_resource path="res://PixelMob/Animation/Slime/Walk.tres" type="Animation" id=4]
+[ext_resource path="res://PixelMob/Animation/Slime/Attack.tres" type="Animation" id=5]
 [ext_resource path="res://PixelMob/Sprite/SlimeB.png" type="Texture" id=6]
 [ext_resource path="res://PixelMob/Audio/Bite.tres" type="AudioStream" id=7]
 [ext_resource path="res://PixelMob/Audio/167075__drminky__slime-land.tres" type="AudioStream" id=8]
 [ext_resource path="res://PixelMob/Mob.gd" type="Script" id=9]
 [ext_resource path="res://PixelMob/Animation/Tree.tres" type="AnimationNodeStateMachine" id=10]
-
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
