@@ -74,8 +74,6 @@ graph_offset = Vector2( 88, -35 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=15]
 
 [node name="Mob" type="Sprite"]
-position = Vector2( 320, 240 )
-scale = Vector2( 10, 10 )
 texture = ExtResource( 6 )
 flip_h = true
 hframes = 16

@@ -12,6 +12,8 @@ __meta__ = {
 }
 
 [node name="Mob" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 250 )
+scale = Vector2( 10, 10 )
 
 [node name="Panel" type="PanelContainer" parent="."]
 anchor_left = 0.5

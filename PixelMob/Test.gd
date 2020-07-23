@@ -3,7 +3,6 @@ extends Control
 onready var _attack := $Panel/HBox/Attack
 onready var _walk := $Panel/HBox/Walk
 onready var _turn := $Panel/HBox/Turn
-onready var _sprite := $Sprite
 onready var _mob := $Mob
 
 func _ready() -> void:
@@ -18,4 +17,4 @@ func _walkPressed() -> void:
 	_mob.walk()
 
 func _turnPressed() -> void:
-	_sprite.scale = Vector2(-_sprite.scale.x, _sprite.scale.y)
+	_mob.scale = Vector2(-_mob.scale.x, _mob.scale.y)
