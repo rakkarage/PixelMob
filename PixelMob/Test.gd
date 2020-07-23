@@ -17,4 +17,4 @@ func _walkPressed() -> void:
 	_mob.walk()
 
 func _turnPressed() -> void:
-	_mob.scale = Vector2(-_mob.scale.x, _mob.scale.y)
+	_mob.flip_h = not _mob.flip_h

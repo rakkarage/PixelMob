@@ -15,7 +15,6 @@
 
 [node name="SlimeSmall" type="Sprite"]
 texture = ExtResource( 6 )
-flip_h = true
 hframes = 15
 script = ExtResource( 9 )
 
