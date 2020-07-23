@@ -4,7 +4,7 @@
 
 [resource]
 resource_name = "Attack"
-length = 2.0
+length = 1.625
 loop = true
 step = 0.125
 tracks/0/type = "value"
