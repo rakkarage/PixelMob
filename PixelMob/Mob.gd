@@ -5,12 +5,17 @@ onready var _machine: AnimationNodeStateMachinePlayback = _tree.get("parameters/
 
 const _key := "parameters/Idle/BlendSpace1D/blend_position"
 
+const _idleAnimationPriority := {
+	-1: 100,
+	0: 20,
+	1: 1
+}
+
 func _ready():
 	idle()
 
-# called from animation function track
 func randomIdle() -> void:
-	_tree[_key] = -1.0 + Random.next(3)
+	_tree[_key] = Random.priority(_idleAnimationPriority)
 
 func idle():
 	_machine.start("Idle")
