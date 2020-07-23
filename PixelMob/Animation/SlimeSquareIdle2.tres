@@ -2,7 +2,7 @@
 
 [resource]
 resource_name = "Idle2"
-length = 3.125
+length = 1.5
 loop = true
 step = 0.125
 tracks/0/type = "value"
@@ -12,10 +12,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.25, 0.375, 0.875, 1.125, 1.25, 1.375, 1.5, 1.625, 1.75, 1.875 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 2, 0, 2, 1, 2, 1, 2, 1, 2, 1, 2 ]
+"values": [ 0 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -24,10 +24,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "randomIdle"
-} ]
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
 }
