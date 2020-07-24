@@ -13,7 +13,7 @@
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
-[node name="SlimeSmall" type="Sprite"]
+[node name="SlimeSquare" type="Sprite"]
 texture = ExtResource( 2 )
 hframes = 5
 frame = 1
