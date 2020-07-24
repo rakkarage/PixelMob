@@ -11,7 +11,7 @@
 [ext_resource path="res://PixelMob/SlimeSquareSmaller.tscn" type="PackedScene" id=9]
 [ext_resource path="res://PixelMob/SlimeSquare.tscn" type="PackedScene" id=10]
 
-[node name="TestFour" type="Control"]
+[node name="TestAll" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -44,8 +44,6 @@ scale = Vector2( 10, 10 )
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -128.0
-margin_right = -128.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
