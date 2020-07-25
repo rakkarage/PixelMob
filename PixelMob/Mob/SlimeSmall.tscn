@@ -23,8 +23,6 @@ tree_root = ExtResource( 2 )
 anim_player = NodePath("Animation")
 active = true
 parameters/playback = SubResource( 1 )
-parameters/conditions/attack = false
-parameters/conditions/walk = false
 parameters/Idle/BlendSpace1D/blend_position = 0
 
 [node name="Animation" type="AnimationPlayer" parent="Tree"]
