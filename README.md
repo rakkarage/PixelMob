@@ -4,9 +4,9 @@
 
 Pixel-perfect animated slime monster.
 
-- <https://henrysoftware.itch.io/godot-pixel-mob>
-- <https://rakkarage.github.io/PixelMob/>
-- <https://guthub.com/rakkarage/PixelMob/>
-- <https://bitbucket.org/rakkarage/PixelMob/>
+- <http://henrysoftware.itch.io/godot-pixel-mob>
+- <http://rakkarage.github.io/PixelMob>
+- <http://guthub.com/rakkarage/PixelMob>
+- <http://bitbucket.org/rakkarage/PixelMob>
 
 [![.github/workflows/deploy.yml](https://github.com/rakkarage/PixelMob/actions/workflows/deploy.yml/badge.svg)](https://github.com/rakkarage/PixelMob/actions/workflows/deploy.yml)
