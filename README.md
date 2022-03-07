@@ -1,17 +1,12 @@
 # PixelMob
 
+<img align="right" src="icon.png">
+
 Pixel-perfect animated slime monster.
 
-- <https://godotmarketplace.com/publisher/henry-software/>
-- <https://bitbucket.org/rakkarage/pixelmob/issues>
-- <https://github.com/rakkarage/pixelmob/issues>
+- <https://henrysoftware.itch.io/godot-pixel-mob>
+- <https://rakkarage.github.io/PixelMob/>
+- <https://guthub.com/rakkarage/PixelMob/>
+- <https://bitbucket.org/rakkarage/PixelMob/>
 
-## Submodules
-
-To include submodules, clone with the --recursive flag:
-
-`git clone --recursive https://bitbucket.org/rakkarage/PixelMob.git`
-
-or download a zip from bitbucket (bitbucket-pipelines.yml) which includes all submodules.
-
-<https://bitbucket.org/rakkarage/pixelmob/downloads/>
+[![.github/workflows/deploy.yml](https://github.com/rakkarage/PixelMob/actions/workflows/deploy.yml/badge.svg)](https://github.com/rakkarage/PixelMob/actions/workflows/deploy.yml)
