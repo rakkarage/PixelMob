@@ -15,29 +15,29 @@ scale = Vector2( 10, 10 )
 [node name="Panel" type="PanelContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -78.5
-margin_right = 78.5
-margin_bottom = 34.0
+offset_left = -78.5
+offset_right = 78.5
+offset_bottom = 34.0
 
 [node name="HBox" type="HBoxContainer" parent="Panel"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 150.0
-margin_bottom = 27.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 150.0
+offset_bottom = 27.0
 
 [node name="Attack" type="Button" parent="Panel/HBox"]
-margin_right = 52.0
-margin_bottom = 20.0
+offset_right = 52.0
+offset_bottom = 20.0
 text = "Attack"
 
 [node name="Walk" type="Button" parent="Panel/HBox"]
-margin_left = 56.0
-margin_right = 99.0
-margin_bottom = 20.0
+offset_left = 56.0
+offset_right = 99.0
+offset_bottom = 20.0
 text = "Walk"
 
 [node name="Turn" type="Button" parent="Panel/HBox"]
-margin_left = 103.0
-margin_right = 143.0
-margin_bottom = 20.0
+offset_left = 103.0
+offset_right = 143.0
+offset_bottom = 20.0
 text = "Turn"
