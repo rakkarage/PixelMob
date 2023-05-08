@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://d1g74yamv7a60"]
+[gd_scene load_steps=13 format=3 uid="uid://d1g74yamv7a60"]
 
 [ext_resource type="Script" path="res://PixelMob/Mob.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://uukv1q4c3tjj" path="res://PixelMob/Sprite/SlimeSmallerA.png" id="1_xvw3k"]
 [ext_resource type="Animation" uid="uid://b5b4qhxentx33" path="res://PixelMob/Animation/SlimeSmaller/Attack.tres" id="2"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://cna2gr5dcy50w" path="res://PixelMob/Animation/Tree.tres" id="3"]
 [ext_resource type="AudioStream" path="res://PixelMob/Audio/167075__drminky__slime-land.tres" id="4"]
@@ -22,6 +23,7 @@ _data = {
 }
 
 [node name="SlimeSmaller" type="Sprite2D"]
+texture = ExtResource("1_xvw3k")
 hframes = 14
 frame = 1
 script = ExtResource("1")

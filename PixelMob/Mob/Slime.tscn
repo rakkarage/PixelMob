@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cktdt7fpv803m"]
+[gd_scene load_steps=13 format=3 uid="uid://cktdt7fpv803m"]
 
 [ext_resource type="Animation" uid="uid://dj1s11uu37drv" path="res://PixelMob/Animation/Slime/Idle0.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://babqccvcsa0fy" path="res://PixelMob/Sprite/SlimeA.png" id="1_c0cyw"]
 [ext_resource type="Script" path="res://PixelMob/Mob.gd" id="2"]
 [ext_resource type="Animation" uid="uid://bhh1om7imnh6e" path="res://PixelMob/Animation/Slime/Attack.tres" id="3"]
 [ext_resource type="Animation" uid="uid://brosqfbiw7hkm" path="res://PixelMob/Animation/Slime/Walk.tres" id="4"]
@@ -22,6 +23,7 @@ _data = {
 }
 
 [node name="Slime" type="Sprite2D"]
+texture = ExtResource("1_c0cyw")
 hframes = 16
 frame = 2
 script = ExtResource("2")
