@@ -6,7 +6,5 @@
 [node name="Demo" type="Node"]
 
 [node name="TestAll" parent="." instance=ExtResource("1")]
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Intro" parent="." instance=ExtResource("2")]
