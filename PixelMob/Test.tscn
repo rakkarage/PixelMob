@@ -22,7 +22,6 @@ layout_mode = 2
 [node name="Slime" parent="VBox/Center/Panel" instance=ExtResource("1")]
 scale = Vector2(10, 10)
 centered = false
-frame = 2
 
 [node name="Panel" type="PanelContainer" parent="VBox"]
 layout_mode = 2
