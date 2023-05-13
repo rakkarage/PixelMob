@@ -1,9 +1,9 @@
 extends Control
 
-@onready var _attack := $Panel/HBox/Attack
-@onready var _walk := $Panel/HBox/Walk
-@onready var _turn := $Panel/HBox/Turn
-@onready var _mob := $Slime
+@onready var _attack := $Panel/VBox/Panel/HBox/Attack
+@onready var _walk := $Panel/VBox/Panel/HBox/Walk
+@onready var _turn := $Panel/VBox/Panel/HBox/Turn
+@onready var _mob := $Panel/VBox/Center/Panel/Slime
 
 func _ready() -> void:
 	_attack.connect("pressed", _attackPressed)
