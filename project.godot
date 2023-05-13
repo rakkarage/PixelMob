@@ -22,7 +22,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Random="*res://PixelMob/Random.gd"
+Random="*res://Core/Random.gd"
 
 [display]
 
