@@ -1,3 +1,4 @@
+class_name Mob
 extends Sprite2D
 
 @onready var _tree: AnimationTree = $Tree
