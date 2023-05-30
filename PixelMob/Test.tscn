@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://1bkgj4vw8shv"]
+[gd_scene load_steps=3 format=3 uid="uid://drkd4hu70f0qd"]
 
-[ext_resource type="PackedScene" uid="uid://cktdt7fpv803m" path="res://PixelMob/Mob/Slime.tscn" id="1"]
-[ext_resource type="Script" path="res://PixelMob/Test.gd" id="7"]
+[ext_resource type="PackedScene" uid="uid://c1mewurj1iqoa" path="res://PixelMobs/Mob/Slime.tscn" id="1"]
+[ext_resource type="Script" path="res://PixelMobs/Test.gd" id="7"]
 
 [node name="Test" type="PanelContainer"]
 custom_minimum_size = Vector2(252, 271)
