@@ -6,11 +6,11 @@ Pixel-perfect animated slime monster.
 
 - 📦 <http://henrysoftware.itch.io/godot-pixel-mob> : more pixel assets
 - 🌐 <http://rakkarage.github.io/PixelMob> : run in browser
-- 📃 <http://guthub.com/rakkarage/PixelMob> : you are here, maybe
+- 📃 <http://github.com/rakkarage/PixelMob> : you are here, maybe
 
 ## Installation
 
-- `git clone --recurse-submodules http://guthub.com/rakkarage/PixelMob`
+- `git clone --recurse-submodules http://github.com/rakkarage/PixelMob`
 - Or `git submodule init` and `git submodule update`.
 
 ---
